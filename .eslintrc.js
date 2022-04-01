@@ -1,24 +1,25 @@
+// eslint-disable-next-line
 module.exports = {
-  root: true,
-  parser: 'babel-eslint',
-  env: {
-    browser: true,
-    node: true
-  },
-  extends: 'standard',
-  // required to lint *.vue files
-  plugins: [
-    'html'
-  ],
-  // add your custom rules here
-  rules: {
-    'space-before-function-paren': [
-      2,
-      {
-        anonymous: 'always',
-        named: 'never'
-      }
+    root: true,
+    env: {
+        es6: true,
+        node: true
+    },
+    parser: '@typescript-eslint/parser',
+    parserOptions: {
+        ecmaVersion: 2020
+    },
+    plugins: ['@typescript-eslint'],
+    extends: [
+        //
+        'eslint:recommended',
+        'plugin:@typescript-eslint/recommended',
+        'prettier'
     ],
-  },
-  globals: {}
-}
+    rules: {
+        'no-case-declarations': 'off',
+        '@typescript-eslint/no-non-null-assertion': 'off',
+        '@typescript-eslint/ban-types': 'off',
+        '@typescript-eslint/no-explicit-any': 'off'
+    }
+};
