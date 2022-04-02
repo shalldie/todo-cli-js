@@ -14,7 +14,7 @@ export default class Add extends Command {
             options: [EStatus.done, EStatus.undone]
         }),
         tags: Flags.string({ char: 't', description: 'Tags of todo.', default: '' }),
-        description: Flags.string({ char: 'd', description: `Todo's description to add.`, required: true })
+        description: Flags.string({ char: 'd', description: 'Description of todo.', required: true })
     };
 
     async run(): Promise<void> {

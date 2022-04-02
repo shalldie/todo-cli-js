@@ -15,7 +15,7 @@ export default class LS extends Command {
             options: [EStatus.all, EStatus.done, EStatus.undone]
         }),
         tags: Flags.string({ char: 't', description: 'Tags of todo.' }),
-        description: Flags.string({ char: 't', description: 'Tags of todo.', required: false })
+        description: Flags.string({ char: 'd', description: 'Description of todo.', required: false })
     };
 
     async run(): Promise<void> {

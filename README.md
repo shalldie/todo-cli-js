@@ -32,9 +32,10 @@ USAGE
 
 <!-- commands -->
 * [`todo add`](#todo-add)
+* [`todo edit`](#todo-edit)
 * [`todo help [COMMAND]`](#todo-help-command)
 * [`todo ls`](#todo-ls)
-* [`todo rm ID`](#todo-rm-id)
+* [`todo rm`](#todo-rm)
 
 ## `todo add`
 
@@ -45,7 +46,7 @@ USAGE
   $ todo add -d <value> [-s done|undone] [-t <value>]
 
 FLAGS
-  -d, --description=<value>   (required) Todo's description to add.
+  -d, --description=<value>   (required) Description of todo.
   -s, --status=(done|undone)  [default: undone] Status of todo's.
   -t, --tags=<value>          Tags of todo.
 
@@ -57,6 +58,29 @@ EXAMPLES
 ```
 
 _See code: [dist/commands/add/index.ts](https://github.com/shalldie/todo-cli-js/blob/v0.0.2/dist/commands/add/index.ts)_
+
+## `todo edit`
+
+List todo items.
+
+```
+USAGE
+  $ todo edit -i <value> [-s all|done|undone] [-t <value>] [-d <value>]
+
+FLAGS
+  -d, --description=<value>       Description of todo.
+  -i, --id=<value>                (required) Id of todo.
+  -s, --status=(all|done|undone)  Status of todos'.
+  -t, --tags=<value>              Tags of todo.
+
+DESCRIPTION
+  List todo items.
+
+EXAMPLES
+  $ todo edit -i 233 -s doned -d "A new description"
+```
+
+_See code: [dist/commands/edit/index.ts](https://github.com/shalldie/todo-cli-js/blob/v0.0.2/dist/commands/edit/index.ts)_
 
 ## `todo help [COMMAND]`
 
@@ -84,12 +108,12 @@ List todo items.
 
 ```
 USAGE
-  $ todo ls [-i <value>] [-s all|done|undone] [-t <value>] [-t <value>]
+  $ todo ls [-i <value>] [-s all|done|undone] [-t <value>] [-d <value>]
 
 FLAGS
+  -d, --description=<value>       Description of todo.
   -i, --id=<value>                Id of todo.
   -s, --status=(all|done|undone)  [default: undone] Status of todos'.
-  -t, --description=<value>       Tags of todo.
   -t, --tags=<value>              Tags of todo.
 
 DESCRIPTION
@@ -101,22 +125,22 @@ EXAMPLES
 
 _See code: [dist/commands/ls/index.ts](https://github.com/shalldie/todo-cli-js/blob/v0.0.2/dist/commands/ls/index.ts)_
 
-## `todo rm ID`
+## `todo rm`
 
 Remove a todo item.
 
 ```
 USAGE
-  $ todo rm [ID]
+  $ todo rm [-i <value>]
 
-ARGUMENTS
-  ID  The id which todo item to be removed.
+FLAGS
+  -i, --id=<value>  Id of todo.
 
 DESCRIPTION
   Remove a todo item.
 
 EXAMPLES
-  $ todo rm 233
+  $ todo rm -i 233
 ```
 
 _See code: [dist/commands/rm/index.ts](https://github.com/shalldie/todo-cli-js/blob/v0.0.2/dist/commands/rm/index.ts)_

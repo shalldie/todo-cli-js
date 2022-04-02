@@ -32,6 +32,16 @@ jobs:
       - run: npm run build
       - run: rm .npmrc
 
+      - name: Commit and push if changed
+        run: |
+          npm run version
+          git config --local user.email "hi.xieshuang@gmail.com"
+          git config --local user.name "shalldie"
+          git diff
+          git add .
+          git commit -m "GitHub Action CI Job" || exit 0
+          git push
+
       # publish to npm
       - id: publish
         uses: JS-DevTools/npm-publish@v1
