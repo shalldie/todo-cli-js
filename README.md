@@ -20,7 +20,7 @@ $ npm install -g todo-cli-js
 $ todo COMMAND
 running command...
 $ todo (--version)
-todo-cli-js/0.0.5 linux-x64 node-v16.14.2
+todo-cli-js/0.0.6 linux-x64 node-v16.14.2
 $ todo --help [COMMAND]
 USAGE
   $ todo COMMAND
@@ -57,7 +57,7 @@ EXAMPLES
   $ todo add -d 'A new todo.'
 ```
 
-_See code: [dist/commands/add/index.ts](https://github.com/shalldie/todo-cli-js/blob/v0.0.5/dist/commands/add/index.ts)_
+_See code: [dist/commands/add/index.ts](https://github.com/shalldie/todo-cli-js/blob/v0.0.6/dist/commands/add/index.ts)_
 
 ## `todo edit`
 
@@ -80,7 +80,7 @@ EXAMPLES
   $ todo edit -i 233 -s done -d "A new description"
 ```
 
-_See code: [dist/commands/edit/index.ts](https://github.com/shalldie/todo-cli-js/blob/v0.0.5/dist/commands/edit/index.ts)_
+_See code: [dist/commands/edit/index.ts](https://github.com/shalldie/todo-cli-js/blob/v0.0.6/dist/commands/edit/index.ts)_
 
 ## `todo help [COMMAND]`
 
@@ -123,7 +123,7 @@ EXAMPLES
   $ todo ls -s all
 ```
 
-_See code: [dist/commands/ls/index.ts](https://github.com/shalldie/todo-cli-js/blob/v0.0.5/dist/commands/ls/index.ts)_
+_See code: [dist/commands/ls/index.ts](https://github.com/shalldie/todo-cli-js/blob/v0.0.6/dist/commands/ls/index.ts)_
 
 ## `todo rm`
 
@@ -143,7 +143,7 @@ EXAMPLES
   $ todo rm -i 233
 ```
 
-_See code: [dist/commands/rm/index.ts](https://github.com/shalldie/todo-cli-js/blob/v0.0.5/dist/commands/rm/index.ts)_
+_See code: [dist/commands/rm/index.ts](https://github.com/shalldie/todo-cli-js/blob/v0.0.6/dist/commands/rm/index.ts)_
 <!-- commandsstop -->
 
 ## License
