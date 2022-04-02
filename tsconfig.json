@@ -6,7 +6,7 @@
         "outDir": "dist",
         "rootDir": "src",
         "strict": true,
-        "target": "es2019",
+        "target": "ES5",
         "esModuleInterop": true
     },
     "include": ["src/**/*"]

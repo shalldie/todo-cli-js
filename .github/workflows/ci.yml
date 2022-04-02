@@ -30,7 +30,6 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm run build
-      - run: rm .npmrc
 
       - name: Commit and push if changed
         run: |
@@ -42,6 +41,7 @@ jobs:
           git commit -m "GitHub Action CI Job" || exit 0
           git push
 
+      - run: rm .npmrc
       # publish to npm
       - id: publish
         uses: JS-DevTools/npm-publish@v1

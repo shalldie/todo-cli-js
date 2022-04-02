@@ -1,10 +1,10 @@
 {
   "name": "todo-cli-js",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "A todo manager on the command-line interface.",
   "author": "shalldie @shalldie",
   "bin": {
-    "task": "./bin/run"
+    "todo": "./bin/run"
   },
   "homepage": "https://github.com/shalldie/todo-cli-js",
   "license": "MIT",
