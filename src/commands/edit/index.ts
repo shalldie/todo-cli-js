@@ -25,5 +25,6 @@ export default class Edit extends Command {
             return;
         }
         Object.assign(item, flags);
+        todo.save();
     }
 }
